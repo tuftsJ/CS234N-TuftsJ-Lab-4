@@ -45,6 +45,11 @@ namespace MMABooksTests
         public void GetUsingWhere()
         {
             // get a list of all of the customers who live in OR
+           
+            /*customers = dbContext.Customers.Where(c => c.State = "OR").SingleOrDefault();
+            Assert.AreEqual(5, customers.Count);
+            Assert.AreEqual("OR", customers[0].State);
+            PrintAll(customers);*/
         }
 
         [Test]
