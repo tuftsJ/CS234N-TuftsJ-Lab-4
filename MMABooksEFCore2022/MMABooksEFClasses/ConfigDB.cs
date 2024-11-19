@@ -10,7 +10,8 @@ using Microsoft.Extensions.Configuration;
  *        
  *      Scaffold-DbContext "server=127.0.0.1;uid=root;pwd=420fouR20!69;database=MMABooks; Port=3308;" MySql.Data.EntityFrameworkCore -OutputDir Models -context MMABooksContext -project MMABooksEFClasses -startupproject MMABooksEFClasses -force
  * this line of code worked     Scaffold-DbContext "server=127.0.0.1;uid=root;pwd=420fouR20!69;database=MMABooks; Port=3308;" Pomelo.EntityFrameworkCore.MySql -OutputDir Models -context MMABooksContext -project MMABooksEFClasses -startupproject MMABooksEFClasses -force
- *      
+ *     
+ *     <code below gets added to MMABooksContext.cs c# file>
  *STRING CONNECTIONSTRING = CONFIGDB.GETMYSQLCONNECTIONSTRING();
  *IF (!OPTIONSBUILDER.ISCONFIGURED)
  *  {

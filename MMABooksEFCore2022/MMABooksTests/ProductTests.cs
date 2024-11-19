@@ -11,8 +11,10 @@ namespace MMABooksTests
     [TestFixture]
     public class ProductTests
     {
-        /*
+
         MMABooksContext dbContext;
+        Products? p;
+        List<Products>? products;
 
         [SetUp]
         public void Setup()
@@ -24,17 +26,29 @@ namespace MMABooksTests
         [Test]
         public void GetAllTest()
         {
+            products = dbContext.Products.OrderBy(p => p.ProductCode).ToList();
+            Assert.AreEqual(16, products.Count);
+            Assert.AreEqual("A4CS", products[0].ProductCode);
+            PrintAll(products);
         }
 
         [Test]
         public void GetByPrimaryKeyTest()
         {
+            p = dbContext.Products.Find(1);
+            Assert.IsNotNull(p);
+            Assert.AreEqual(1, p.ProductCode);
+            Console.WriteLine(p);
         }
 
         [Test]
         public void GetUsingWhere()
         {
             // get a list of all of the products that have a unit price of 56.50
+            products = dbContext.Products.Where(p => p.UnitPrice == 56.50m).OrderBy(p => p.ProductCode).ToList();
+            Assert.AreEqual(7, products.Count);
+            Assert.AreEqual(56.50m, products[0].UnitPrice);
+            PrintAll(products);
         }
 
         [Test]
@@ -68,6 +82,14 @@ namespace MMABooksTests
         {
 
         }
-       */
+
+        public void PrintAll(List<Products> products)
+        {
+            foreach (Products p in products)
+            {
+                Console.WriteLine(p);
+            }
+        }
+
     }
 }
