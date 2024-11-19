@@ -8,7 +8,19 @@ using Microsoft.Extensions.Configuration;
  * -- Install-Package Microsoft.EntityFrameworkCore.Tools could do from the console too
  * Get-Help about_EntityFrameworkCore from the console
  *        
- *      Scaffold-DbContext "server=127.0.0.1;uid=root;pwd=YOURPASSWORD;database=MMABooks" MySql.Data.EntityFrameworkCore -OutputDir Models -context MMABooksContext -project MMABooksEFClasses -startupproject MMABooksEFClasses -force
+ *      Scaffold-DbContext "server=127.0.0.1;uid=root;pwd=420fouR20!69;database=MMABooks; Port=3308;" MySql.Data.EntityFrameworkCore -OutputDir Models -context MMABooksContext -project MMABooksEFClasses -startupproject MMABooksEFClasses -force
+ * this line of code worked     Scaffold-DbContext "server=127.0.0.1;uid=root;pwd=420fouR20!69;database=MMABooks; Port=3308;" Pomelo.EntityFrameworkCore.MySql -OutputDir Models -context MMABooksContext -project MMABooksEFClasses -startupproject MMABooksEFClasses -force
+ *      
+ *STRING CONNECTIONSTRING = CONFIGDB.GETMYSQLCONNECTIONSTRING();
+ *IF (!OPTIONSBUILDER.ISCONFIGURED)
+ *  {
+	    VAR SERVERVERSION = NEW MYSQLSERVERVERSION(NEW VERSION(8, 0));
+	    OPTIONSBUILDER.USEMYSQL(CONNECTIONSTRING, SERVERVERSION);
+    }
+ *
+ *
+ *
+ *
  */
 namespace MMABooksEFClasses
 {
