@@ -73,6 +73,10 @@ namespace MMABooksTests
         [Test]
         public void CreateTest()
         {
+            /*s = dbContext.States
+            dbContext.States.Create(s);
+            dbContext.SaveChanges();
+            Assert.IsNull(dbContext.States.Find(""));*/
 
         }
 
